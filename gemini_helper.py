@@ -1,6 +1,39 @@
 import os
+from pathlib import Path
 import google.generativeai as genai
 from dotenv import load_dotenv
+
+# Load .env from the project directory
+BASE_DIR = Path(__file__).resolve().parent
+load_dotenv(BASE_DIR / ".env", override=True)
+
+api_key = os.getenv("GEMINI_API_KEY")
+
+if not api_key:
+    raise ValueError(
+        "GEMINI_API_KEY not found. Check your .env file."
+    )
+
+genai.configure(api_key=api_key)
+
+MODEL_NAME = "gemini-2.5-flash-lite"
+
+model = genai.GenerativeModel(
+    MODEL_NAME,
+    generation_config={
+        "max_output_tokens": 500,
+        "temperature": 0.4,
+    },
+)
+Keep the rest of your functions (ask_text, ask_audio, explain_disease, and diagnose_with_gemini_vision) unchanged.
+
+3. Test whether the key is loaded correctly
+From your project folder, activate your virtual environment:
+
+
+bat
+venv\Scripts\activate
+Then run:
  
 load_dotenv()
 genai.configure(api_key=os.getenv("GEMINI_API_KEY"))

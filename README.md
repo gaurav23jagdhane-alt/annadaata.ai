@@ -5,7 +5,7 @@
 Smart India Hackathon 2026 · Internal Hackathon, Fergusson College (Autonomous)
 **Team ByteCraft** · PS ID: SIH25074 · Theme: Agriculture, FoodTech & Rural Development · Category: Software
 
-**Live demo:** [`(https://annadaataai-bqtxylbix773ucjwkdyfva.streamlit.app/)`]
+**Live demo:** [`https://annadaata-ai-kerala-farming-assistant.ai.studio`]
 
 ---
 
